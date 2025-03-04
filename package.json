@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "inquirer": "^12.4.2",
+    "pg": "^8.13.3"
+  },
+  "name": "employeetrackerchallenge",
+  "version": "1.0.0",
+  "description": "sql tables to track employees",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nita9801/employeeTrackerChallenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/nita9801/employeeTrackerChallenge/issues"
+  },
+  "homepage": "https://github.com/nita9801/employeeTrackerChallenge#readme"
+}
