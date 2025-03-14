@@ -110,42 +110,54 @@ async function addRole() {
       type: 'input',
       name: 'department_id',
       message: 'What is the Dept ID:',
+      validate: function(value) {
+        const valid = !isNaN(parseInt(value));
+        return valid || 'Please enter a valid number';
+      },
     },
   ]);
 
-  await client.query('INSERT INTO role (title, salary, department_id) VALUES ($1, $2, $3)', [answers.title, answers.salary, answers.department_id]);
-  console.log('Successfully added the Role');
+  const departmentId = parseInt(answers.department_id);
+
+  // Check if the department_id exists
+  const res = await client.query('SELECT * FROM department WHERE id = $1', [departmentId]);
+  if (res.rows.length === 0) {
+    console.error('Error: Department ID does not exist.');
+    return mainMenu();
+  }
+
+  try {
+    await client.query('INSERT INTO role (title, salary, department_id) VALUES ($1, $2, $3)', [answers.title, answers.salary, departmentId]);
+    console.log('Successfully added the Role');
+  } catch (error) {
+    console.error('Error adding role:', error);
+  }
+
   mainMenu();
 }
 
-async function addEmployee() {
+const addEmployee = async () => {
   const answers = await inquirer.prompt([
-    {
-      type: 'input',
-      name: 'first_name',
-      message: 'first name of the employee:',
-    },
-    {
-      type: 'input',
-      name: 'last_name',
-      message: 'last name of the employee:',
-    },
-    {
-      type: 'input',
-      name: 'role_id',
-      message: 'What is the employee role?:',
-    },
-    {
-      type: 'input',
-      name: 'manager_id',
-      message: 'what is the Manager ID (if any):',
-    },
+    { name: 'first_name', message: 'First name of the employee:' },
+    { name: 'last_name', message: 'Last name of the employee:' },
+    { name: 'role_id', message: 'What is the employee role ID?' },
+    { name: 'manager_id', message: 'What is the Manager ID (if any):', default: null }
   ]);
 
-  await client.query('INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES ($1, $2, $3, $4)', [answers.first_name, answers.last_name, answers.role_id, answers.manager_id || null]);
-  console.log('successfully added');
+  const managerId = answers.manager_id ? parseInt(answers.manager_id) : null;
+
+  try {
+    await client.query(
+      'INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ($1, $2, $3, $4)',
+      [answers.first_name, answers.last_name, answers.role_id, managerId]
+    );
+    console.log('Successfully added Employee');
+  } catch (err) {
+    console.error('Error adding employee:', err);
+  }
+
   mainMenu();
-}
+};
 
 async function updateEmployeeRole() {
   const answers = await inquirer.prompt([
