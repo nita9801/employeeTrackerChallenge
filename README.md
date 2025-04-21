@@ -83,7 +83,7 @@ this project uses postgreSQL to create a database to organize employee data
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/nita9801/employeeTrackerChallenge.git.git
+   git clone https://github.com/nita9801/employeeTrackerChallenge.git
    ```
 2.  Install NPM packages
    ```sh
