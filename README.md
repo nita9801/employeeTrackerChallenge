@@ -13,7 +13,7 @@
     <a href="https://github.com/nita9801/employeeTrackerChallenge.git"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/nita9801/employeeTrackerChallenge.git">View Demo</a>
+    <a href="https://app.screencastify.com/v3/watch/wLmzFQroYrwiSr4L6ehx">View Demo</a>
     &middot;
     
     
