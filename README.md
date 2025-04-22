@@ -1,15 +1,10 @@
 <a id="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![project_license][license-shield]][license-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/nita9801/employeeTrackerChallenge.git">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
+    
 <h3 align="center">Employee Tracker Challenge/h3>
 
   <p align="center">
@@ -20,9 +15,9 @@
     <br />
     <a href="https://github.com/nita9801/employeeTrackerChallenge.git">View Demo</a>
     &middot;
-    <a href="https://github.com/nita9801/employeeTrackerChallenge.git/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    &middot;
-    <a href="https://github.com/nita9801/employeeTrackerChallenge.git/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    
+    
+    
   </p>
 </div>
 
