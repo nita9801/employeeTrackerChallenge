@@ -55,14 +55,14 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-this project uses postgreSQL to create a database to organize employee data
+This project uses postgreSQL to create a database to organize employee data
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 ### Built With
 
-* [![PostgreSQL][PostgreSQL.js]][PostgreSQL.url]
+* ![PostgreSQL][PostgreSQL.js]
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,29 +86,26 @@ this project uses postgreSQL to create a database to organize employee data
    git clone https://github.com/nita9801/employeeTrackerChallenge.git
    ```
 2.  Install NPM packages
-   ```sh
-   npm install
+    ```sh
+    npm install
+    ```
+   
+4. Run the postgres server by using the loging for postgreSQl  
+    ```sh
+   psql -U your_actual_username
+   Password for user your_actual_username
    ```
-4. run the postgres server by using the loging for postgreSQL
-   psql -U postgres
-   and your password.
-   ```
-5. than in the root of the terminal run the application using 
+
+5. than in the root of the terminal run the application 
+    ```sh
    node index.js
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-this couldbe used for new hirees, promotions, terminations and overall restructuring.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-See the [open issues](https://github.com/nita9801/employeeTrackerChallenge.git/issues) for a full list of proposed features (and known issues).
+To stream line the hiring and or changing of postion and or salary of an employee allow a more efficient way to get things done.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,8 +126,6 @@ Distributed under the project_license. See `LICENSE.txt` for more information.
 Christine L: [187074331+nita9801@users.noreply.github.com](187074331+nita9801@users.noreply.github.com);
 
 Project Link: [https://github.com/nita9801/employeeTrackerChallenge.git](https://github.com/nita9801/employeeTrackerChallenge.git)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
